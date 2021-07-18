@@ -1,0 +1,79 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: auto;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.btn_ban {
+    background-color: red;
+}
+
+.btn_daban {
+    background-color: gray;
+    border: 1px solid;
+}
+
+label {
+    font-weight: bolder;
+}
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    /* Sit on top */
+    z-index: 10;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 40%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    /* Could be more or less, depending on screen size */
+}
+
+
+/* Add Zoom Animation */
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    /* relevant part */
+    overflow: hidden;
+    /* relevant part */
+}

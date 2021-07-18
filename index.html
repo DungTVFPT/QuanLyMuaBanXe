@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/main.css'>
+    <script language="javascript" src="./js/script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+    <div class="container wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Trang chủ<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Quản Lý Xe Mua</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Quản Lý Xe Bán</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Ví dụ: 34B3-12345" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm Kiếm</button>
+                </form>
+            </div>
+        </nav>
+
+        <h3>Thống Kê Tất Cả Các Xe</h3>
+
+        <div id='id01' class="modal">
+            <form class="modal-content animate">
+                <div class="container">
+                    <div>
+                        <h2>Thêm xe mua</h2>
+                    </div>
+                    <div class=" form-group ">
+                        <label for="exampleFormControlInput1 ">Biển Số</label>
+                        <input type="text " class="form-control " id="exampleFormControlInput1 " placeholder="Ví dụ: 34B1-12345 ">
+                    </div>
+                    <div class="form-group ">
+                        <label for="exampleFormControlInput1 ">Loại Xe</label>
+                        <input type="text " class="form-control " id="exampleFormControlInput1 " placeholder="Ví dụ: Xe dream ">
+                    </div>
+                    <div class="form-group ">
+                        <label for="exampleFormControlInput1 ">Nơi Mua</label>
+                        <input type="text " class="form-control " id="exampleFormControlInput1 " placeholder="Ví dụ: Khám Thanh Hà ">
+                    </div>
+                    <div class="form-group ">
+                        <label for="exampleFormControlInput1 ">Ngày Mua</label>
+                        <input type="date" name="date-mua">
+                    </div>
+                    <div class="form-group ">
+                        <label for="exampleFormControlInput1 ">Giá Mua</label>
+                        <input type="text " class="form-control " id="exampleFormControlInput1 " placeholder="Ví dụ: 11.000.000 ">
+                    </div>
+                    <div class="form-group ">
+                        <label for="exampleFormControlInput1 ">Ghi Chú</label>
+                        <input type="text " class="form-control " id="exampleFormControlInput1 " placeholder="Ví dụ: Chưa giấy bán ">
+                    </div>
+
+
+                    <div>
+                        <button type="submit" style="width: 70px;" class="btn btn-success">Thêm</button>
+                        <button onclick="btnCancelClick()" type="button" style="width: 70px;" class="btn btn-danger">Hủy bỏ</button>
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+
+        <div style="padding-bottom: 20px;">
+            <button onclick="btnAddNewClick()" type="button" class="btn btn-primary">Thêm xe mua</button>
+        </div>
+
+
+        <div>
+            <table class="table ">
+                <thead class="thead-light ">
+                    <tr>
+                        <th scope="col ">STT</th>
+                        <th scope="col ">Biển Số</th>
+                        <th scope="col ">Loại Xe</th>
+                        <th scope="col ">Nơi mua</th>
+                        <th scope="col ">Ngày Mua</th>
+                        <th scope="col ">Giá Mua</th>
+                        <th scope="col ">Trạng Thái</th>
+                        <th scope="col ">Chức Năng</th>
+                        <th scope="col ">Ghi Chú</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row ">1</th>
+                        <td>34B1-12345</td>
+                        <td>Dream</td>
+                        <td>Hải Dương</td>
+                        <td>20/01/2000</td>
+                        <td>11.000.000</td>
+                        <td><button class="btn_ban " type="button ">Bán</button></td>
+                        <td>
+                            <button>Sửa</button>
+                            <button>Xóa</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row ">2</th>
+                        <td>34B1-12345</td>
+                        <td>Dream</td>
+                        <td>Hải Dương</td>
+                        <td>20/01/2000</td>
+                        <td>11.000.000</td>
+                        <td><button class="btn_ban " type="button ">Bán</button></td>
+                        <td>
+                            <button>Sửa</button>
+                            <button>Xóa</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row ">3</th>
+                        <td>34B1-12345</td>
+                        <td>Dream</td>
+                        <td>Hải Dương</td>
+                        <td>20/01/2000</td>
+                        <td>11.000.000</td>
+                        <td><button class="btn_daban " type="button " disabled>Đã Bán</button></td>
+                        <td>
+                            <button>Sửa</button>
+                            <button>Xóa</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+        <h3>Thông Kê Xe Mua Chưa Bán</h3>
+
+        <table class="table ">
+            <thead class="thead-light ">
+                <tr>
+                    <th scope="col ">STT</th>
+                    <th scope="col ">Biển Số</th>
+                    <th scope="col ">Loại Xe</th>
+                    <th scope="col ">Nơi mua</th>
+                    <td scope="col ">Ngày Mua</td>
+                    <th scope="col ">Giá Mua</th>
+                    <th scope="col ">Trạng Thái</th>
+                    <th scope="col ">Chức Năng</th>
+                    <th scope="col ">Ghi Chú</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row ">1</th>
+                    <td>34B1-12345</td>
+                    <td>Dream</td>
+                    <td>Hải Dương</td>
+                    <td>20/01/2000</td>
+                    <td>11.000.000</td>
+                    <td><button class="btn_ban " type="button ">Bán</button></td>
+                    <td>
+                        <button>Sửa</button>
+                        <button>Xóa</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row ">2</th>
+                    <td>34B1-12345</td>
+                    <td>Dream</td>
+                    <td>Hải Dương</td>
+                    <td>20/01/2000</td>
+                    <td>11.000.000</td>
+                    <td><button class="btn_ban " type="button ">Bán</button></td>
+                    <td>
+                        <button>Sửa</button>
+                        <button>Xóa</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row ">3</th>
+                    <td>34B1-12345</td>
+                    <td>Dream</td>
+                    <td>Hải Dương</td>
+                    <td>20/01/2000</td>
+                    <td>11.000.000</td>
+                    <td><button class="btn_ban " type="button ">Bán</button></td>
+                    <td>
+                        <button>Sửa</button>
+                        <button>Xóa</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+
+        <h3>Thông Kê Xe Đã Bán</h3>
+        <table class="table ">
+            <thead class="thead-light ">
+                <tr>
+                    <th scope="col ">STT</th>
+                    <th>Biển Số</th>
+                    <th>Loại Xe</th>
+                    <th>Người mua</th>
+                    <th>Ngày Bán</th>
+                    <th>Giá Mua</th>
+                    <th>Giá Bán</th>
+                    <th>Chức Năng</th>
+                    <th>Ghi chú</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row ">1</th>
+                    <td>34B1-12345</td>
+                    <td>Dream</td>
+                    <td>Hải Dương</td>
+                    <td></td>
+                    <td>11.000.000</td>
+                    <td>12.000.000</td>
+                    <td>
+                        <button>Sửa</button>
+                    </td>
+                    <td>Cả đăng ký</td>
+                </tr>
+                <tr>
+                    <th scope="row ">2</th>
+                    <td>34B1-12345</td>
+                    <td>Dream</td>
+                    <td>Hải Dương</td>
+                    <td></td>
+                    <td>11.000.000</td>
+                    <td>12.000.000</td>
+                    <td>
+                        <button>Sửa</button>
+                    </td>
+                    <td>Cả đăng ký</td>
+                </tr>
+                <tr>
+                    <th scope="row ">3</th>
+                    <td>34B1-12345</td>
+                    <td>Dream</td>
+                    <td>Hải Dương</td>
+                    <td></td>
+                    <td>11.000.000</td>
+                    <td>12.000.000</td>
+                    <td>
+                        <button>Sửa</button>
+                    </td>
+                    <td>Cả đăng ký</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</body>
+
+</html>
