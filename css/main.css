@@ -69,11 +69,3 @@ label {
     -webkit-animation: animatezoom 0.6s;
     animation: animatezoom 0.6s
 }
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    /* relevant part */
-    overflow: hidden;
-    /* relevant part */
-}
