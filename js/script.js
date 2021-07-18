@@ -1,7 +1,7 @@
 function btnAddNewClick() {
-    document.getElementById('id01').style.display = 'block';
+    document.getElementById('form-add-new').style.display = 'block';
 }
 
 function btnCancelClick() {
-    document.getElementById('id01').style.display = 'none';
+    document.getElementById('form-add-new').style.display = 'none';
 }
