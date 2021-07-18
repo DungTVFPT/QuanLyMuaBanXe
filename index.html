@@ -85,48 +85,6 @@
             </form>
         </div>
 
-        <div id='form-add-update' class="modal">
-            <form class="modal-content animate">
-                <div class="container">
-                    <div>
-                        <h2>Sửa Thông Tin Xe</h2>
-                    </div>
-                    <div class=" form-group ">
-                        <label for="exampleFormControlInput1 ">Biển Số</label>
-                        <input type="text " class="form-control " id="exampleFormControlInput1 " placeholder="Ví dụ: 34B1-12345 ">
-                    </div>
-                    <div class="form-group ">
-                        <label for="exampleFormControlInput1 ">Loại Xe</label>
-                        <input type="text " class="form-control " id="exampleFormControlInput1 " placeholder="Ví dụ: Xe dream ">
-                    </div>
-                    <div class="form-group ">
-                        <label for="exampleFormControlInput1 ">Nơi Mua</label>
-                        <input type="text " class="form-control " id="exampleFormControlInput1 " placeholder="Ví dụ: Khám Thanh Hà ">
-                    </div>
-                    <div class="form-group ">
-                        <label for="exampleFormControlInput1 ">Ngày Mua</label>
-                        <input type="date" name="date-mua">
-                    </div>
-                    <div class="form-group ">
-                        <label for="exampleFormControlInput1 ">Giá Mua</label>
-                        <input type="text " class="form-control " id="exampleFormControlInput1 " placeholder="Ví dụ: 11.000.000 ">
-                    </div>
-                    <div class="form-group ">
-                        <label for="exampleFormControlInput1 ">Ghi Chú</label>
-                        <input type="text " class="form-control " id="exampleFormControlInput1 " placeholder="Ví dụ: Chưa giấy bán ">
-                    </div>
-
-
-                    <div>
-                        <button type="submit" style="width: 70px;" class="btn btn-success">Thêm</button>
-                        <button onclick="btnCancelClick()" type="button" style="width: 70px;" class="btn btn-danger">Hủy bỏ</button>
-                    </div>
-                </div>
-
-
-            </form>
-        </div>
-
 
         <h3 style="padding-top: 30px;">Thông Kê Xe Mua Chưa Bán</h3>
         <div style="padding-bottom: 20px;">
@@ -157,7 +115,7 @@
                     <td contenteditable="true">11.000.000</td>
                     <td><button class="btn_ban " type="button ">Bán</button></td>
                     <td>
-                        <button>Sửa</button>
+                        <button>Cập nhật</button>
                         <button>Xóa</button>
                     </td>
                 </tr>
@@ -170,7 +128,7 @@
                     <td contenteditable="true">11.000.000</td>
                     <td><button class="btn_ban " type="button ">Bán</button></td>
                     <td>
-                        <button>Sửa</button>
+                        <button>Cập nhật</button>
                         <button>Xóa</button>
                     </td>
                 </tr>
@@ -183,17 +141,14 @@
                     <td contenteditable="true">11.000.000</td>
                     <td><button class="btn_ban " type="button ">Bán</button></td>
                     <td>
-                        <button>Sửa</button>
+                        <button>Cập nhật</button>
                         <button>Xóa</button>
                     </td>
                 </tr>
             </tbody>
         </table>
 
-
-
-
-        <h3>Thông Kê Xe Đã Bán</h3>
+        <h3 style="padding-top: 30px;">Thông Kê Xe Đã Bán</h3>
         <table class="table ">
             <thead class="thead-light ">
                 <tr>
@@ -213,45 +168,45 @@
                     <th scope="row ">1</th>
                     <td>34B1-12345</td>
                     <td>Dream</td>
-                    <td>Hải Dương</td>
-                    <td></td>
+                    <td contenteditable="true">Hải Dương</td>
+                    <td contenteditable="true"></td>
                     <td>11.000.000</td>
-                    <td>12.000.000</td>
+                    <td contenteditable="true">12.000.000</td>
                     <td>
-                        <button>Sửa</button>
+                        <button>Cập nhật</button>
                     </td>
-                    <td>Cả đăng ký</td>
+                    <td contenteditable="true">Cả đăng ký</td>
                 </tr>
                 <tr>
                     <th scope="row ">2</th>
                     <td>34B1-12345</td>
                     <td>Dream</td>
-                    <td>Hải Dương</td>
-                    <td></td>
+                    <td contenteditable="true">Hải Dương</td>
+                    <td contenteditable="true"></td>
                     <td>11.000.000</td>
-                    <td>12.000.000</td>
+                    <td contenteditable="true">12.000.000</td>
                     <td>
-                        <button>Sửa</button>
+                        <button>Cập nhật</button>
                     </td>
-                    <td>Cả đăng ký</td>
+                    <td contenteditable="true">Cả đăng ký</td>
                 </tr>
                 <tr>
                     <th scope="row ">3</th>
                     <td>34B1-12345</td>
                     <td>Dream</td>
-                    <td>Hải Dương</td>
-                    <td></td>
+                    <td contenteditable="true">Hải Dương</td>
+                    <td contenteditable="true"></td>
                     <td>11.000.000</td>
-                    <td>12.000.000</td>
+                    <td contenteditable="true">12.000.000</td>
                     <td>
-                        <button>Sửa</button>
+                        <button>Cập nhật</button>
                     </td>
-                    <td>Cả đăng ký</td>
+                    <td contenteditable="true">Cả đăng ký</td>
                 </tr>
             </tbody>
         </table>
 
-        <h3>Thống Kê Tất Cả Các Xe</h3>
+        <h3 style="padding-top: 30px;">Thống Kê Tất Cả Các Xe</h3>
 
         <div style="padding-bottom: 20px;">
             <button onclick="btnAddNewClick()" type="button" class="btn btn-primary">Thêm xe mua</button>
@@ -276,40 +231,40 @@
                 <tbody>
                     <tr>
                         <th scope="row ">1</th>
-                        <td>34B1-12345</td>
-                        <td>Dream</td>
-                        <td>Hải Dương</td>
-                        <td>20/01/2000</td>
-                        <td>11.000.000</td>
+                        <td contenteditable="true">34B1-12345</td>
+                        <td contenteditable="true">Dream</td>
+                        <td contenteditable="true">Hải Dương</td>
+                        <td contenteditable="true">20/01/2000</td>
+                        <td contenteditable="true">11.000.000</td>
                         <td><button class="btn_ban " type="button ">Bán</button></td>
                         <td>
-                            <button>Sửa</button>
+                            <button>Cập nhật</button>
                             <button>Xóa</button>
                         </td>
                     </tr>
                     <tr>
                         <th scope="row ">2</th>
-                        <td>34B1-12345</td>
-                        <td>Dream</td>
-                        <td>Hải Dương</td>
-                        <td>20/01/2000</td>
-                        <td>11.000.000</td>
+                        <td contenteditable="true">34B1-12345</td>
+                        <td contenteditable="true">Dream</td>
+                        <td contenteditable="true">Hải Dương</td>
+                        <td contenteditable="true">20/01/2000</td>
+                        <td contenteditable="true">11.000.000</td>
                         <td><button class="btn_ban " type="button ">Bán</button></td>
                         <td>
-                            <button>Sửa</button>
+                            <button>Cập nhật</button>
                             <button>Xóa</button>
                         </td>
                     </tr>
                     <tr>
                         <th scope="row ">3</th>
-                        <td>34B1-12345</td>
-                        <td>Dream</td>
-                        <td>Hải Dương</td>
-                        <td>20/01/2000</td>
-                        <td>11.000.000</td>
-                        <td><button class="btn_daban " type="button " disabled>Đã Bán</button></td>
+                        <td contenteditable="true">34B1-12345</td>
+                        <td contenteditable="true">Dream</td>
+                        <td contenteditable="true">Hải Dương</td>
+                        <td contenteditable="true">20/01/2000</td>
+                        <td contenteditable="true">11.000.000</td>
+                        <td><button class="btn_ban " type="button ">Bán</button></td>
                         <td>
-                            <button>Sửa</button>
+                            <button>Cập nhật</button>
                             <button>Xóa</button>
                         </td>
                     </tr>
